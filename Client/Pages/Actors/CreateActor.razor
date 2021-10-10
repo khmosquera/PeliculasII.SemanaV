@@ -1,0 +1,16 @@
+@page "/actors/create"
+@using PeliculaIISemanaIV.Client.Pages.Components
+
+<FormActor Actor = "Actor" OnValidSubmitt="Create"> </FormActor>
+
+@code{
+    @* Instanciamos la entidad Actor *@
+    private Actor Actor = new Actor();
+    void Create(){
+        Console.WriteLine($"Actor {Actor.Name}");
+        Console.WriteLine($"Fecha de nacimiento {Actor.BirthDate}");
+        Console.WriteLine($"Cantidad de créditos {Actor.KnowCredits}");
+        Console.WriteLine($"Foto base64 {Actor.Photo}");
+        
+    }
+}

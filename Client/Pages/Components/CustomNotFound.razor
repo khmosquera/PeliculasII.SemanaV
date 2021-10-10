@@ -1,0 +1,9 @@
+@*Personalizar el Usuario no encontrado de una página*@
+<div class="alert alert-info" role="alert">
+  Lo sentimos, página no encontrada
+</div>
+@code{
+    protected override void OnInitialized(){
+        Console.WriteLine("404, Ruta no encontrada");
+    }
+}

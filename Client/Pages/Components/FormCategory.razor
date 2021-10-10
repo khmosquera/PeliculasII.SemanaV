@@ -1,0 +1,26 @@
+@* El OnValidSubmit va a tomar el nombre del metodo "Crear" "Editar" para pasarlo al modelo y luego la base de datos*@
+<div class="jumbotron">
+    <EditForm Model="Category" OnValidSubmit="OnValidSubmit">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        
+        <div class="form-group">
+            <label class="form-label">Categoria</label>
+        </div>
+
+        <div>
+            <div> class="mb-3</div>
+            <InputText class="form-control" @bind-Value="@Category.Name"
+                Placeholder="Ingresa el nombre de la categoría"></InputText>
+            <ValidationMessage For="@(()=>Category.Name)"></ValidationMessage>
+        </div>
+        
+        <div class="mb-3">
+            <button class="btn btn-sucess" type="submit">Guardar</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    [Parameter] public Category Category { get; set; }
+    [Parameter] EventCallback OnValidSubmit { get; set; }
+}

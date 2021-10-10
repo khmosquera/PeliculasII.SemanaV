@@ -1,0 +1,62 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">PeliculaIISemanaIV</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="categories">
+                <span class="oi oi-plus" aria-hidden="true"></span> Categorías
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="movies">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Película
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="actors">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Reparto
+            </NavLink>
+        </li> 
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="movies/filter">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Crear película
+            </NavLink>
+        </li>
+
+        @*<li class="nav-item px-3">
+            <NavLink class="nav-link" href="movies/search">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Buscar película
+            </NavLink>
+        </li> *@
+ 
+        @* <li class="nav-item px-3">
+            <NavLink class="nav-link" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </li> *@
+        @* <li class="nav-item px-3">
+            <NavLink class="nav-link" href="datatable">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> DataTable
+            </NavLink>
+        </li> *@
+        
+    </ul>
+</div>
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

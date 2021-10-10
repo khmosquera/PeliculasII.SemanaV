@@ -1,0 +1,24 @@
+@page "/actors/edit/{Id:int}"
+@using PeliculaIISemanaIV.Client.Pages.Components
+
+<FormActor Actor = "Actor" OnValidSubmitt="Edit"> </FormActor>
+
+@code{
+    @* Instanciamos la entidad Actor *@
+    
+    [Parameter] public int Id{get;set;}
+    Actor Actor = new Actor();
+    protected override void OnInitialized(){
+        Actor = new Actor(){
+            Id = Id,
+            Name = "Cobbie Smulders",
+            KnowCredits = 18,
+            BirthDate = DateTime.Today
+        };
+    } 
+
+    void Edit(){
+       Console.WriteLine("Modificando");
+        
+    }
+}

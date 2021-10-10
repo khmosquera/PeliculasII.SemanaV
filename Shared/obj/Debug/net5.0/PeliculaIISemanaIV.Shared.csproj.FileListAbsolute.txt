@@ -1,0 +1,12 @@
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\bin\Debug\net5.0\PeliculaIISemanaIV.Shared.deps.json
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\bin\Debug\net5.0\PeliculaIISemanaIV.Shared.dll
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\bin\Debug\net5.0\ref\PeliculaIISemanaIV.Shared.dll
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\bin\Debug\net5.0\PeliculaIISemanaIV.Shared.pdb
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.csproj.AssemblyReference.cache
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.AssemblyInfoInputs.cache
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.AssemblyInfo.cs
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.csproj.CoreCompileInputs.cache
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.dll
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\ref\PeliculaIISemanaIV.Shared.dll
+C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Shared\obj\Debug\net5.0\PeliculaIISemanaIV.Shared.pdb
