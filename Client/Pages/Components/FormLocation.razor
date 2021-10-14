@@ -1,0 +1,60 @@
+@using PeliculaIISemanaIV.Client.Pages.Components
+<div class="container">
+    <div class="jumbotron">
+        <EditForm Model="Location" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            @*Input Para el país*@
+            <div class="mb-3">
+                <InputText class="form-control" @bind-Value="@Location.Country" placeholder="País"></InputText>
+                <ValidationMessage For="@(()=>Location.Country)"></ValidationMessage>
+            </div>
+             @*Input Para la ciudad*@
+            <div class="mb-3">
+                <InputText class="form-control" @bind-Value="@Location.City" placeholder="Ciudad"></InputText>
+                <ValidationMessage For="@(()=>Location.City)"></ValidationMessage>
+            </div>
+            @*Input Para la fecha de lanzamiento*@
+            <div class="form-group row mb-3">
+                <div class="col col-sm-8">
+                   <InputDate class="form-control" @bind-Value="@Location.Year"></InputDate>
+                   <ValidationMessage For="@(()=>Location.Year)"></ValidationMessage>
+                </div>
+            @*Input ProductionType*@
+                <div class="col-sm-4">
+                    <InputNumber class="form-control" @bind-Value="@Location.ProductionType"></InputNumber>
+                    <ValidationMessage For="@(()=>@Location.ProductionType)"></ValidationMessage>
+                </div>
+                @*Input para industria*@
+                <div class="col-sm-4">
+                    <InputNumber class="form-control" @bind-Value="@Location.Industry"></InputNumber>
+                    <ValidationMessage For="@(()=>Location.Industry)"></ValidationMessage>
+                </div>
+            </div>
+            @*Campo que permite el cargue de una foto*@
+            <div class="form-group">
+                <PicComponent Label="picture" ImageSelected="PicSelected" PicURL="@PicURL" ></PicComponent>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success">Crear</button>
+            </div>
+            
+            
+        </EditForm>
+    </div>
+</div>
+@code{
+    string PicURL;
+    [Parameter] public Location Location {get;set;}
+    [Parameter] public EventCallback OnValidSubmit{get;set;}
+    protected override void OnInitialized(){
+        if (!string.IsNullOrEmpty(Location.Photo))
+        {
+             PicURL = Location.Photo;
+             Location.Photo = null;           
+        }
+    }
+    private void PicSelected(string imageB64){
+        Location.Photo = imageB64;
+        PicURL = null;
+    }
+}

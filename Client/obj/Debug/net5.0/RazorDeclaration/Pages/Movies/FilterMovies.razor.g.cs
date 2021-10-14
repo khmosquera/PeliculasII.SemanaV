@@ -103,7 +103,7 @@ using PeliculaIISemanaIV.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movies/filter")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/filter")]
     public partial class FilterMovies : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -112,55 +112,46 @@ using PeliculaIISemanaIV.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\FilterMovies.razor"
+#line 45 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\FilterMovies.razor"
       
-    private List<Movie> Movies;
-    private List<Category> categories = new List<Category>();
-    string movie_name ="";
-    string categorySelected ="";
-    private bool futurosEstrenos = false;
+        private List<Movie> Movies;
+        private List<Category> categories = new List<Category>(); 
+        string movie_name = "";
+        string CategorySelected ="";
+        private bool futurosestrenos = false;
+        private bool enCartelera = false;
+        private bool mejorCalificada = false;
 
-    private bool enCartelera = false;
-    private bool mejorCalificada = false;
-
-    protected override void OnInitialized(){
-        Movies = movie.GetMovies();
-    }
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 68 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\FilterMovies.razor"
-        
-    private void ShowMovies(){
-        Movies = movie.GetMovies().Where(x=>x.Name.ToLower().Contains(movie_name.ToLower())).ToList();
-        Console.WriteLine($"Película: {movie_name}, categoria seleccionada {categorySelected}");
-        Console.WriteLine($"PróximosEstrenos: {futurosEstrenos}, en cartelera {enCartelera} mejor calificada {mejorCalificada}");
-}
-
-private void ClearInputs (){
-    Movies = movie.GetMovies();
-    movie_name = "";
-    categorySelected = "0";
-    futurosEstrenos = false;
-
-    enCartelera = false;
-    mejorCalificada = false;
-
-}
-    private void MovieSearch(KeyboardEventArgs e){
-        if (e.Key == "Enter")
-        {
-            ShowMovies();  
+        protected override void OnInitialized(){
+            Movies=movie.GetMovies();            
         }
-    }
 
+        private void ShowMovies(){
+            Movies = movie.GetMovies().Where(x=>x.Name.ToLower().Contains(movie_name.ToLower())).ToList();
+            Console.WriteLine($"Pelicula : {movie_name}, categoria seleccionada {CategorySelected}");
+            Console.WriteLine($"Proximos Estrenos : {futurosestrenos}, en cartelera {enCartelera} mejor calificada {mejorCalificada}");
+        }
+        
+        private void ClearInputs(){
+            Movies = movie.GetMovies();
+            movie_name = "";
+            CategorySelected = "0";
+            futurosestrenos = false;
+            enCartelera = false;
+            mejorCalificada = false;
+        }
+        private void MovieSearch(KeyboardEventArgs e){
+            if (e.Key == "Enter")
+            {
+                ShowMovies();
+            }
+        }
+        
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceMovie movie { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceMovieII movie { get; set; }
     }
 }
 #pragma warning restore 1591

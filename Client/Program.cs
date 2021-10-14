@@ -24,8 +24,9 @@ namespace PeliculaIISemanaIV.Client
             await builder.Build().RunAsync();
         }
         private static void ConfigureServices(IServiceCollection services){
-        services.AddSingleton<IServiceMovie, ServiceMovie>();
-        
+        services.AddSingleton<IServiceMovieII, ServiceMovieII>();
+        services.AddSingleton<IServiceLocation, ServiceLocation>();
+        services.AddSingleton<IServiceActor, ServiceActor>();
         }
     }
 }

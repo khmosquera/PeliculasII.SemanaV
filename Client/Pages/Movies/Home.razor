@@ -1,4 +1,47 @@
 @page "/"
-@using PeliculaIISemanaIV.Client.Pages.Components
+<div class="jumbotron">
+ @if (Movies == null)
+     {
+     <label><small class="text-muted">No se encontraron registros</small></label>    
+} else{
+    @foreach ( var item_movie in Movies)
+    {
+        <div class="list-group align-items-start mb-3">
+            @*Fila que contiene la informacion de una pelicula*@
+            <div class="row">
+                <div class="col md-3">
+                    <img src="@item_movie.Poster" alt="" height="400px" width="300px">
+                     </div>
+                    <div class="col md-9">
+                        <h6 class="text-left"><small class="text-muted">@item_movie.Name</small></h6>
+                        <blockquote class="blockquote text-left"><small>@item_movie.Sinopsis</small></blockquote>
+                </div>
+                
+            </div>
 
-<CardComponent></CardComponent> 
+        </div>
+    }    
+}
+
+ 
+</div>
+@*Seccion de CSS*@
+@code{
+    public List<Movie> Movies{get{return GetMovies();}}
+    @*Funcion que retorna una lista de 10 peliculas *@
+    private List<Movie> GetMovies(){
+        return new List<Movie>(){
+            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie1.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie4.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie5.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie6.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie7.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie8.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie9.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie10.jpg", Premier=new DateTime(2021,10,01)},
+            };
+        }
+
+}

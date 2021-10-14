@@ -1,5 +1,7 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">PeliculaIISemanaIV</a>
+    <a class="navbar-brand" rel="home" href="" title="SmartTech">
+        <img style="max-width:80px; margin-top: -7px;" src="/Images/LogoST.jpeg">
+    </a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,46 +10,112 @@
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="categories">
+            <NavLink class="nav-link" href="categories" Match="NavLinkMatch.All">
                 <span class="oi oi-plus" aria-hidden="true"></span> Categorías
             </NavLink>
         </li>
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="categories/create">
+                <span class="oi oi-plus" aria-hidden="true"></span> Crear categoría
+            </NavLink>
+        </li>
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="categories/edit/{Id:int}">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Editar categoria
+            </NavLink>
+        </li>
+        
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="movies">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Película
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Página no encontrada
             </NavLink>
         </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="actors">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Reparto
-            </NavLink>
-        </li> 
-
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="movies/filter">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Crear película
-            </NavLink>
-        </li>
-
-        @*<li class="nav-item px-3">
-            <NavLink class="nav-link" href="movies/search">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Buscar película
-            </NavLink>
-        </li> *@
- 
-        @* <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li> *@
-        @* <li class="nav-item px-3">
-            <NavLink class="nav-link" href="datatable">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> DataTable
-            </NavLink>
-        </li> *@
-        
     </ul>
+
+    @*Peliculas*@
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="movie/filter">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Buscar película
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="movie/create">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Crear película
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="movie/edit">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Editar película
+                </NavLink>
+            </li>
+        </ul>
+    </div>
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="actors">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Reparto
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="actors/edit">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Editar reparto
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="actors/create">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Crear actor
+                </NavLink>
+            </li>
+        </ul>
+    </div>
+
+    @*NavMenu.razor para Locations*@
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="locations">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Locaciones
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="locations/create">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Crear locación
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="locations/edit">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Editar locación
+                </NavLink>
+            </li>
+        </ul>
+    </div>
 </div>
+
+
+@* Actores *@
+
+
+@*<li class="nav-item px-3">
+    <NavLink class="nav-link" href="movies/search">
+    <span class="oi oi-list-rich" aria-hidden="true"></span> Buscar película
+    </NavLink>
+    </li> *@
+
+@* <li class="nav-item px-3">
+    <NavLink class="nav-link" href="fetchdata">
+    <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+    </NavLink>
+    </li> *@
+@* <li class="nav-item px-3">
+    <NavLink class="nav-link" href="datatable">
+    <span class="oi oi-list-rich" aria-hidden="true"></span> DataTable
+    </NavLink>
+    </li> *@
 
 
 @code {

@@ -1,0 +1,9 @@
+@page "/locations/create"
+@using PeliculaIISemanaIV.Client.Pages.Components
+<FormLocation OnValidSubmit="Create" Location="Location"></FormLocation>
+@code{
+    private Location Location = new Location();
+    void Create(){
+        Console.WriteLine("");
+    }
+}

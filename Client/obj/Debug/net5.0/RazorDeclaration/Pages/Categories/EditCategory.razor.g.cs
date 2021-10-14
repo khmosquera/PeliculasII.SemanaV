@@ -118,14 +118,15 @@ using PeliculaIISemanaIV.Client.Pages.Components;
     private Category Category;
 
     protected override void OnInitialized(){
-        Category = new Category(){
+    Category = new Category(){
         Id = Id,
         Name = "Terror"
         };
     }
 
     private void Edit(){
-        Console.WriteLine($"Actualizando la categporía Id{Category.Id} Nombre {Category.Name}");
+       Console.WriteLine($"Id: {Category.Id}");
+        Console.WriteLine($"Categoría: {Category.Name}");
     }
 
 #line default

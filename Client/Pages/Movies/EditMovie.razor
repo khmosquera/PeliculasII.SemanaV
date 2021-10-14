@@ -1,5 +1,37 @@
-@page "/movies/edit/{MovieID:int}"
-<h6>Editar película</h6>
-@code{
-    [Parameter] public int MovieId {get;set;}
+@page "/movie/edit/{Id:int}"
+@using PeliculaIISemanaIV.Client.Pages.Components
+@inject NavigationManager NavigationManager
+
+
+   
+   
+<FormMovie Movie="Movie" OnValidSubmit="Edit"></FormMovie>
+
+@code {
+    @* Propidad del Id que pasa como parámetro desde la Uri*@
+    [Parameter] public int Id {get;set;}
+    @* Con el navigationManager vamos a redireccionar al usuario a otras rutas del sistema-. no se crea una instancia como tal sino el llamado del modelo  *@
+    Movie Movie = new Movie();
+    
+    protected override void OnInitialized()
+    {
+        Movie = new Movie()
+        {
+        
+            Name = "Memento",
+            EnCartelera = true,
+            Sinopsis = "Sinopsis ... Cine arte",
+            Trailer = "Trailer"
+        };   
+            
+    }
+    void Edit()
+     {
+        Console.WriteLine($"Pelicula: {Movie.Name}");
+        Console.WriteLine($"Premier: {Movie.Premier}");
+        Console.WriteLine($"Esta en cartelera: {Movie.EnCartelera}");
+        Console.WriteLine($"Poster: {Movie.Poster}");
+        Console.WriteLine($"Sinopsis: {Movie.Sinopsis}");
+    }
 }
+

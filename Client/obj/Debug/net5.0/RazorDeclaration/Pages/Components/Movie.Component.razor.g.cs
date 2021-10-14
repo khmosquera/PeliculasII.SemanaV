@@ -104,16 +104,14 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\Movie.Component.razor"
+#line 14 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\Movie.Component.razor"
       
     [Parameter] public Movie Movie{get;set;}
-    [Parameter] public EventCallback<Movie> DeleteMovie {get;set;}
     private string urlMovie = string.Empty;
 
-    protected override void OnInitialized()
-        {
-            urlMovie = $"movie/";
-        }
+    protected override void OnInitialized(){
+        urlMovie = $"movie/";
+    }
 
 #line default
 #line hidden

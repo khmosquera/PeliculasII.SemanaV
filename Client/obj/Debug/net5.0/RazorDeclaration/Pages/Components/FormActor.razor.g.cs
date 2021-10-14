@@ -111,37 +111,32 @@ using PeliculaIISemanaIV.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormActor.razor"
-      
-    string imageOptional;
-    [Parameter] public Actor Actor;
-    [Parameter] public EventCallback  OnValidSubmitt{get;set;}
+#line 37 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormActor.razor"
+       
+    string imageURL;
+    [Parameter] public Actor Actor { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
 
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 39 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormActor.razor"
-                                                                                   
-    protected override void OnInitialized(){
+    protected override void OnInitialized()
+    {
         if (!string.IsNullOrEmpty(Actor.Photo))
         {
-            imageOptional = Actor.Photo;
+            imageURL = Actor.Photo;
             Actor.Photo = null;
         }
     }
+    
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 47 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormActor.razor"
-                                   
+#line 50 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormActor.razor"
+                                       
     private void ImageSelected(string imageB64)
     {
         Actor.Photo = imageB64;
-        imageOptional = null;
+        imageURL = null;
     }
 
 #line default

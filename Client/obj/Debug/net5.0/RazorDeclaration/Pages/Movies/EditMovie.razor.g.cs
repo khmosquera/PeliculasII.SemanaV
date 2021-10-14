@@ -96,7 +96,14 @@ using PeliculaIISemanaIV.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movies/edit/{MovieID:int}")]
+#nullable restore
+#line 2 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\EditMovie.razor"
+using PeliculaIISemanaIV.Client.Pages.Components;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/edit/{Id:int}")]
     public partial class EditMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,13 +112,44 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 3 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\EditMovie.razor"
-      
-    [Parameter] public int MovieId {get;set;}
+#line 11 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\EditMovie.razor"
+                                                             
+    [Parameter] public int Id {get;set;}
+    
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\EditMovie.razor"
+                                                                                                                                                             
+    Movie Movie = new Movie();
+    
+    protected override void OnInitialized()
+    {
+        Movie = new Movie()
+        {
+        
+            Name = "Memento",
+            EnCartelera = true,
+            Sinopsis = "Sinopsis ... Cine arte",
+            Trailer = "Trailer"
+        };   
+            
+    }
+    void Edit()
+     {
+        Console.WriteLine($"Pelicula: {Movie.Name}");
+        Console.WriteLine($"Premier: {Movie.Premier}");
+        Console.WriteLine($"Esta en cartelera: {Movie.EnCartelera}");
+        Console.WriteLine($"Poster: {Movie.Poster}");
+        Console.WriteLine($"Sinopsis: {Movie.Sinopsis}");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

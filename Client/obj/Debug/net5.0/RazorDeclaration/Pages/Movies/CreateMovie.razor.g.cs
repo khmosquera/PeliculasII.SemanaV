@@ -96,7 +96,14 @@ using PeliculaIISemanaIV.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movies/create")]
+#nullable restore
+#line 3 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\CreateMovie.razor"
+using PeliculaIISemanaIV.Client.Pages.Components;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/create")]
     public partial class CreateMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,20 +112,42 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\CreateMovie.razor"
+#line 7 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\CreateMovie.razor"
        
-    void Create()
+    private Movie Movie  = new Movie();
+    private List<Category> CategoriasNoSeleccionadas = new List<Category>();
+    
+    protected override void OnInitialized()
+    {
+        CategoriasNoSeleccionadas = new List<Category>()
+            {
+                new Category(){Id = 1, Name="Terror"},
+                new Category(){Id = 2, Name="Cine arte"}, 
+                new Category(){Id = 3, Name="Comedia"}, 
+                new Category(){Id = 4, Name="Ficción"}, 
+                new Category(){Id = 5, Name="Animada"},
+                new Category(){Id = 6, Name="Adaptación"}, 
+                new Category(){Id = 7, Name="Romance"}   
+            };
+    }
     
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\CreateMovie.razor"
-                                                                                            
+#line 24 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\CreateMovie.razor"
+                                                                                             
+    void Create()
+    
     {
         Console.WriteLine(NavigationManager.Uri);
         NavigationManager.NavigateTo("movie");
+        Console.WriteLine($"Película: {Movie.Name}");
+        Console.WriteLine($"Premier: {Movie.Premier}");
+        Console.WriteLine($"Está en cartelera: {Movie.EnCartelera}");
+        Console.WriteLine($"Poster: {Movie.Poster}");
+        Console.WriteLine($"Sipnosis: {Movie.Sinopsis}");
     }
 
 #line default

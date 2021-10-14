@@ -10,7 +10,7 @@ namespace PeliculaIISemanaIV.Shared.Entity
         public string Name{get;set;}
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public DateTime? BirthDate{get;set;}
-        public int Photo{get;set;}
+        public string Photo{get;set;}
         public int KnowCredits{get;set;}
         public string Biography {get;set;}
         public int Nominations {get;set;}

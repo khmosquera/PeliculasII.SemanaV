@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LAbk1vCvuP94gtirOgrhx1GNPMRtzf4OXIAablZ5ggNzARhSJjMlrX5ciZRlLs0a0yK4ubKkHFP9iRTxVOpQ4A==",
+  "dgSpecHash": "NqK7QVx+faEIjnrrVVYwqo4HkhgztmQ37uDW4yeUJl9hlDPxP9glBLFVEgmbKUpOCQL+NTAhguK5f/+UUwwpjw==",
   "success": true,
   "projectFilePath": "C:\\PeliculasII\\PeliculaIISemanaIV\\PeliculaIISemanaIV\\Client\\PeliculaIISemanaIV.Client.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.10\\microsoft.jsinterop.webassembly.5.0.10.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.10\\microsoft.netcore.app.runtime.browser-wasm.5.0.10.nupkg.sha512"
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.11\\microsoft.netcore.app.runtime.browser-wasm.5.0.11.nupkg.sha512"
   ],
   "logs": []
 }

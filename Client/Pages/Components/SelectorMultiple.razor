@@ -1,0 +1,98 @@
+@using PeliculaIISemanaIV.Client.Model
+<style type="text/css">
+    .selector-multiple {
+        display: flex;
+    }
+    .selectable-ul{
+        height: 200px;
+        overflow: auto;
+        list-style-type:none;
+        width: 170px;
+        padding: 0;
+        border-radius: 3px;
+        @*Color borde*@
+        border:1px solid #ccc;
+    }
+    .selectable-ul li{
+        cursor: pointer;
+        border-bottom: 1px #eee solid;
+        padding: 2px 10px;
+        front-Size: 14px;
+    }
+    @* Que cambie de color al pasar el mouse por encima*@
+    .selectable-ul li:hover{
+        background-color:#08c;
+    }
+    .selector-multiple-botones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+    .selector-multiple-botones button{
+        margin: 5px;
+    }
+</style>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="form-group">
+            <div class="selector-multiple">
+                @* Cuadro con categorías que se tiene como opción*@
+                <ul class="Selectable-ul">
+                    @foreach (var item in NoSeleccionados)
+                    {
+                        <li @onclick="@(() => Seleccionar(item))">@item.Value</li>
+                    }
+                </ul>
+                @* Sección de botones *@
+                <div class="selectable-multiple">
+                    <button type="button" @onclick="@SeleccionarTodo"></button>
+                    <button type="button" @onclick="@DeseleccionarTodo"></button>
+                </div>
+                @* Cuadro con categorías ya seleccionadas*@
+                <ul class="Selectable-ul">
+                    @foreach (var item in Seleccionados)
+                    {
+                        <li @onclick="@(() => Deseleccionar(item))">@item.Value</li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+             
+    </div>
+</div>
+@code{
+    private string removerTodoTexto = "<<";
+    private string pasarTodoTexto = ">>";
+
+    [Parameter] public List<SelectorMultipleModel>NoSeleccionados{get;set;}
+        = new List<SelectorMultipleModel>();
+    [Parameter] public List<SelectorMultipleModel>Seleccionados{get;set;}
+        = new List<SelectorMultipleModel>();
+
+@* Métodos que se activan desde los cuadros que listan las categorias*@
+    private void Seleccionar(SelectorMultipleModel item)
+    {
+        NoSeleccionados.Remove(item);
+        Seleccionados.Add(item);
+    }
+    private void Deseleccionar(SelectorMultipleModel item)
+    {
+        Seleccionados.AddRange(NoSeleccionados);
+        NoSeleccionados.Clear();
+    }
+    @* Funciones que se activan con el evento clic den el botón*@
+    private void SeleccionarTodo()
+    {
+        Seleccionados.AddRange(NoSeleccionados);
+        NoSeleccionados.Clear();
+    }
+    private void DeseleccionarTodo()
+    {
+        NoSeleccionados.AddRange(Seleccionados);
+        Seleccionados.Clear();
+    }
+}

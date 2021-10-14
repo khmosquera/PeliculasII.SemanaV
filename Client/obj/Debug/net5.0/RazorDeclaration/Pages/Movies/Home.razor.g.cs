@@ -96,13 +96,6 @@ using PeliculaIISemanaIV.Client.Services;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
-using PeliculaIISemanaIV.Client.Pages.Components;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Home : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,6 +104,37 @@ using PeliculaIISemanaIV.Client.Pages.Components;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 29 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
+      
+    public List<Movie> Movies{get{return GetMovies();}}
+    
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 31 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
+                                                      
+    private List<Movie> GetMovies(){
+        return new List<Movie>(){
+            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie1.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie4.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie5.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie6.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie7.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie8.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie9.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie10.jpg", Premier=new DateTime(2021,10,01)},
+            };
+        }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

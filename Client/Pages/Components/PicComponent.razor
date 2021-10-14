@@ -1,0 +1,48 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">@Label
+             @* El InputFile se utiliza para cargar arhivos *@
+            <InputFile OnChange="OnChange" accept=".jpg,.png,.jpeg,.gif"></InputFile>
+            </label>
+        </div>
+    </div>
+    <div>
+        @if (imageF != null)
+        {
+            <div>
+                <div style="margin:10px">
+                    <img src="data:image/jpeg;base64,@imageF" width="300px" alt="">
+                </div>
+            </div>
+        }
+        @if (PicURL != null)
+        {
+            <div>
+                <div style="margin:10px">
+                    <img src="@PicURL" width="200px" alt="">
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@* Responder al evento de cambio de imagen 20:00 *@
+@code {
+    [Parameter] public string Label { get; set; } = "Imagen";
+    [Parameter] public string PicURL { get; set; }
+    [Parameter] public EventCallback<string> PicSelected { get; set; }
+    private string imageF;
+    async Task OnChange(InputFileChangeEventArgs e)
+    {
+        var images = e.GetMultipleFiles();
+        foreach (var image in images)
+        {
+            var tamaño = new byte[image.Size];
+            await image.OpenReadStream().ReadAsync(tamaño);
+            imageF = Convert.ToBase64String(tamaño);
+            PicURL = null;
+            await PicSelected.InvokeAsync(imageF);
+            StateHasChanged();
+        }
+    }
+}

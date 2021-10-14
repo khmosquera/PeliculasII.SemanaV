@@ -1,44 +1,51 @@
-<div class="mb-3">
-    <label class="form-label">@Label</label>
-    @* El InputFile se utiliza para cargar arhivos *@
-    <InputFile OnChange="OnChange" accept=".jpg, .jpeg, .png, .gif"></InputFile>
-</div>
 <div>
-    @if (imageOriginal !=null)
-    {
-        <div>
-            <div style="margin:10px">
-                <img src="data:image/jpeg;base64,@imageOriginal" width=200 px alt="">
-            </div>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">@Label
+             @* El InputFile se utiliza para cargar arhivos *@
+            <InputFile OnChange="OnChange" accept=".jpg,.png,.jpeg,.gif"></InputFile>
+            </label>
         </div>
-    }
-    @if (imageOptional !=null)
-    {
-        <div>
-            <div style="margin:10px">
-                <img src="data:image/jpeg;base64,@imageOptional" width=200 px alt="">
+    </div>
+    <div>
+        @if (imageT != null)
+        {
+            <div>
+                <div style="margin:10px">
+                    <img src="data:image/jpeg;base64,@imageT" width="300px" alt="">
+                </div>
             </div>
-        </div>
-    }
-</div>    
-@code{
-    private string imageOriginal;
-    [Parameter] public string imageOptional {get;set;}
-    [Parameter] public string Label {get;set;}
-    [Parameter] public EventCallback <string> ImageSelected{get;set;}
+        }
+
+        @if (ImageURL != null)
+        {
+            <div>
+                <div style="margin:10px">
+                    <img src="@ImageURL" width="200px" alt="">
+                </div>
+            </div>
+        }
+    </div>
+</div>
 @* Responder al evento de cambio de imagen 20:00 *@
-    async Task OnChange(InputFileChangeEventArgs e){
+@code {
+    [Parameter] public string Label { get; set; } = "Imagen";
+    [Parameter] public string ImageURL { get; set; }
+    [Parameter] public EventCallback<string> ImageSelected { get; set; }
+    private string imageT;
+    async Task OnChange(InputFileChangeEventArgs e)
+    {
         var images = e.GetMultipleFiles();
         foreach (var image in images)
         {
             var tamaño = new byte[image.Size];
             await image.OpenReadStream().ReadAsync(tamaño);
-            imageOriginal = Convert.ToBase64String(tamaño);
-            imageOptional = null;
-            await ImageSelected.InvokeAsync(imageOriginal);
+            imageT = Convert.ToBase64String(tamaño);
+            ImageURL = null;
+            await ImageSelected.InvokeAsync(imageT);
             StateHasChanged();
         }
-    }    
+    }
 }
 
 

@@ -103,6 +103,30 @@ using PeliculaIISemanaIV.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 31 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\ImageComponent.razor"
+       
+    [Parameter] public string Label { get; set; } = "Imagen";
+    [Parameter] public string ImageURL { get; set; }
+    [Parameter] public EventCallback<string> ImageSelected { get; set; }
+    private string imageT;
+    async Task OnChange(InputFileChangeEventArgs e)
+    {
+        var images = e.GetMultipleFiles();
+        foreach (var image in images)
+        {
+            var tamaño = new byte[image.Size];
+            await image.OpenReadStream().ReadAsync(tamaño);
+            imageT = Convert.ToBase64String(tamaño);
+            ImageURL = null;
+            await ImageSelected.InvokeAsync(imageT);
+            StateHasChanged();
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

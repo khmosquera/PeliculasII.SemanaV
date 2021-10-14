@@ -17,46 +17,46 @@
             </div>
             @* Input de cantidad de créditos: InputNumber*@
             <div class="mb-3">
-                <InputNumber class="form-control" @bind-Value="Actor.KnowCredits" placeholder="Nombre actor"></InputNumber>
+                <InputNumber class="form-control" @bind-Value="Actor.KnowCredits" placeholder="Nombre actor">
+                </InputNumber>
                 <ValidationMessage For="@(()=>Actor.KnowCredits)"></ValidationMessage>
             </div>
             @*Campo que permite el cargue de una sola foto*@
             @* <div class="form-group">
                 <ImageComponent Label="photo" ImageSelected="ImageSelected" ImageOptonal="@imageOptional"></ImageComponent>
-            </div> *@
+                </div> *@
             <div class="form-group">
-                <button class="btn btn-success">Aceptar</button>
+                <ImageComponent Label="photo" ImageSelected="ImageSelected" ImageURL="@imageURL"></ImageComponent>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success">Guardar</button>
             </div>
         </EditForm>
     </div>
 </div>
-@code{
-    string imageOptional;
-    [Parameter] public Actor Actor{get;set;}
-    [Parameter] public EventCallback OnValidSubmit {get;set;}
+@code {
+    string imageURL;
+    [Parameter] public Actor Actor { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
 
-    protected override void OnInitialized(){
+    protected override void OnInitialized()
+    {
         if (!string.IsNullOrEmpty(Actor.Photo))
         {
-            imageOptional=Actor.Photo;
-            Actor.Photo=null;
+            imageURL = Actor.Photo;
+            Actor.Photo = null;
         }
     }
-@* Imagen principal seleccionada *@
+    @* Imagen principal seleccionada *@
     private void ImageSelected(string imageB64)
     {
         Actor.Photo = imageB64;
-        imageOptional = null;
+        imageURL = null;
     }
 }
 
 
-        @*Recordar que estos métodos se crean en método create y edit *@
-        @* Validar que haya una imagen cargada (Ejem cambio de foto portada, perfil ...) *@
-        @*Hasta el min 45:00 código bien, inicio de creación de repositorio en GitHub VER SPRINT INDIVIDUAL MIN 50:00 CRUD (POR AHORA EDITAR, AÑADIR Y LISTAR - VALIDACIONES*@
-
-
-
-
-
-
+@*Recordar que estos métodos se crean en método create y edit *@
+@* Validar que haya una imagen cargada (Ejem cambio de foto portada, perfil ...) *@
+@*Hasta el min 45:00 código bien, inicio de creación de repositorio en GitHub VER SPRINT INDIVIDUAL MIN 50:00 CRUD (POR
+    AHORA EDITAR, AÑADIR Y LISTAR - VALIDACIONES*@

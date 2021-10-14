@@ -104,10 +104,10 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormCategory.razor"
+#line 20 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Components\FormCategory.razor"
        
     [Parameter] public Category Category { get; set; }
-    [Parameter] EventCallback OnValidSubmit { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
 
 #line default
 #line hidden

@@ -104,7 +104,7 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 53 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Shared\NavMenu.razor"
+#line 121 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

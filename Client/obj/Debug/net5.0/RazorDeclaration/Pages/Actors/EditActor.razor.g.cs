@@ -96,7 +96,14 @@ using PeliculaIISemanaIV.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/actors/edit/{PersonId:int}")]
+#nullable restore
+#line 2 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Actors\EditActor.razor"
+using PeliculaIISemanaIV.Client.Pages.Components;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/actors/edit/{Id:int}")]
     public partial class EditActor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,9 +112,24 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 3 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Actors\EditActor.razor"
-      
-    [Parameter] public int PersonId {get;set;}
+#line 7 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Actors\EditActor.razor"
+                                       
+    
+    [Parameter] public int Id{get;set;}
+    Actor Actor = new Actor();
+    protected override void OnInitialized(){
+        Actor = new Actor(){
+            Id = Id,
+            Name = "Cobbie Smulders",
+            KnowCredits = 18,
+            BirthDate = DateTime.Today
+        };
+    } 
+
+    void Edit(){
+       Console.WriteLine("Modificando");
+        
+    }
 
 #line default
 #line hidden

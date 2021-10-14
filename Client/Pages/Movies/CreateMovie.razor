@@ -1,18 +1,37 @@
-@page "/movies/create"
+@page "/movie/create"
 @inject NavigationManager NavigationManager
+@using PeliculaIISemanaIV.Client.Pages.Components
 
-<div class="jumbotron">
-    <div class="form-group mb-3">
-        <button class="btn btn-info" @onclick="Create"></button>
-    </div>
-</div>
+<FormMovie Movie = "Movie" OnValidSubmit="Create" CategoriasNoSeleccionadas="CategoriasNoSeleccionadas"></FormMovie>
 
 @code {
+    private Movie Movie  = new Movie();
+    private List<Category> CategoriasNoSeleccionadas = new List<Category>();
+    
+    protected override void OnInitialized()
+    {
+        CategoriasNoSeleccionadas = new List<Category>()
+            {
+                new Category(){Id = 1, Name="Terror"},
+                new Category(){Id = 2, Name="Cine arte"}, 
+                new Category(){Id = 3, Name="Comedia"}, 
+                new Category(){Id = 4, Name="Ficción"}, 
+                new Category(){Id = 5, Name="Animada"},
+                new Category(){Id = 6, Name="Adaptación"}, 
+                new Category(){Id = 7, Name="Romance"}   
+            };
+    }
+    @* Con el navigationManager vamos a redireccionar al usuario a otras rutas del sistema *@
     void Create()
-    @* Con el navigationManager vamos a redireccionar al usuario a otras rutas del sistema*@
+    
     {
         Console.WriteLine(NavigationManager.Uri);
         NavigationManager.NavigateTo("movie");
+        Console.WriteLine($"Película: {Movie.Name}");
+        Console.WriteLine($"Premier: {Movie.Premier}");
+        Console.WriteLine($"Está en cartelera: {Movie.EnCartelera}");
+        Console.WriteLine($"Poster: {Movie.Poster}");
+        Console.WriteLine($"Sipnosis: {Movie.Sinopsis}");
     }
 }
 

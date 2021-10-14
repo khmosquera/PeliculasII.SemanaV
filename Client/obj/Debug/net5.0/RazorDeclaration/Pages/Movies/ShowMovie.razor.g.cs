@@ -96,8 +96,8 @@ using PeliculaIISemanaIV.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/{MovieId:int}")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/{MovieId:int}/{Name}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/{Id:int}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/{Id:int}/{Name}")]
     public partial class ShowMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
