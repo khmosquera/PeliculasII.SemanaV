@@ -8,15 +8,15 @@ namespace PeliculaIISemanaIV.Client.Services
     {
         public List <Location> GetLocations(){
             return new List<Location>{
-                new Location(){Country = "Colombia", City = "Bogotá", Year = "1994", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Manizales", Year = "1987", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Medellín", Year = "1996", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Bogotá", Year = "1976", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Bogotá", Year = "1989", ProductionType = ProductionType.ProdNational, Industry =Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Neiva", Year = "1993", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Cartagena", Year = "1984", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Calí", Year = "1987", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,},
-                new Location(){Country = "Colombia", City = "Bogotá", Year = "2000", ProductionType = ProductionType.ProdNational, Industry = Industry.Cinema,}
+                new Location(){Country = "Colombia", City = "Bogotá", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img1.jpg"},
+                new Location(){Country = "Colombia", City = "Manizales", Year =new DateTime(2021,10,01), Photo="/Images/Locaciones/img2.jpg"},
+                new Location(){Country = "Colombia", City = "Medellín", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img3.jpg"},
+                new Location(){Country = "Colombia", City = "Bogotá", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img4.jpg"},
+                new Location(){Country = "Colombia", City = "Bogotá", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img5.jpg"},
+                new Location(){Country = "Colombia", City = "Neiva", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img6.jpg"},
+                new Location(){Country = "Colombia", City = "Cartagena", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img7.jpg"},
+                new Location(){Country = "Colombia", City = "Calí", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img8.jpg"},
+                new Location(){Country = "Colombia", City = "Bogotá", Year = new DateTime(2021,10,01), Photo="/Images/Locaciones/img9.jpg"}
             };
         }
     }

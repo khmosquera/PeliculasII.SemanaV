@@ -9,7 +9,7 @@ namespace PeliculaIISemanaIV.Client.Services
         public List<Movie>GetMovies(){
             return new List<Movie>(){
 
-                new Movie(){Id=1, Name=" PelículaI ",Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie1.jpg", Premier=new DateTime(2021,10,01)},
+                new Movie(){Id= 1, Name=" PelículaI ",Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie1.jpg", Premier=new DateTime(2021,10,01)},
                 new Movie(){Id=2, Name=" PelículaI  ",Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
                 new Movie(){Id=3, Name=" PelículaI  ",Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie3.jpg", Premier=new DateTime(2021,10,01)},
                 new Movie(){Id=4, Name=" PelículaI  ",Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie4.jpg", Premier=new DateTime(2021,10,01)},

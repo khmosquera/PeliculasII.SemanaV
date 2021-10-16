@@ -195,13 +195,13 @@
       "mscorlib.dll": "sha256-heWnofXFSc\/TfAxrWpjQxeuS+nlIOs9YycfI2QGXGM8=",
       "netstandard.dll": "sha256-mbIVAluJ7cAx0vUQshB\/c1zEIK5JcYwIYxo\/BQ\/meRU=",
       "System.Private.CoreLib.dll": "sha256-FrZbEyy47f3RDuj77R5oHUGxSGEDgRRxykTjImrLqfM=",
-      "PeliculaIISemanaIV.Shared.dll": "sha256-r7bIPnLA7of+Ciyp5MRRx1RpjMTQy1zmbr3vDEDeT4Y=",
-      "PeliculaIISemanaIV.Client.dll": "sha256-nFW2XksMWsSnYrNH1mbYLem0wdNNKRDwiBRAN9terbw="
+      "PeliculaIISemanaIV.Shared.dll": "sha256-e7Ig2nkVhTCaoKQrzkiKqOX+a7VkVWhGBQLdqVTt\/Dg=",
+      "PeliculaIISemanaIV.Client.dll": "sha256-Xs8gxIWFf2DghPnxa+j+5nsFl+S4ovMNhSzzg2gKovw="
     },
     "lazyAssembly": null,
     "pdb": {
-      "PeliculaIISemanaIV.Shared.pdb": "sha256-GjVBuMjk1zc2mjdjPXFG3hopUdycyzruD95FKz61D0A=",
-      "PeliculaIISemanaIV.Client.pdb": "sha256-9OGI3PiBWgin9v0GPls+uYIsSJCX2COPBr1PtOkM\/Yc="
+      "PeliculaIISemanaIV.Shared.pdb": "sha256-9\/6AdImcMKhgaLg3mSkEteUY0sJb\/9NLJaklkceuPdU=",
+      "PeliculaIISemanaIV.Client.pdb": "sha256-aEdrW1qO+O2X83+xa5AdbAo07u+E+cp9VZ5hbB2NKy8="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-5ttRwTa4Rar530elwLdfGDeH9I9NX9MPyDl6zLi9uug=",

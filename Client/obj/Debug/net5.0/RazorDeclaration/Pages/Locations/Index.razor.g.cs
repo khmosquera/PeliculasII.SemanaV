@@ -98,7 +98,7 @@ using PeliculaIISemanaIV.Client.Services;
 #nullable disable
 #nullable restore
 #line 2 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Locations\Index.razor"
-using PracticaSemanaIV.Client.Pages.Components;
+using PeliculaIISemanaIV.Client.Pages.Components;
 
 #line default
 #line hidden

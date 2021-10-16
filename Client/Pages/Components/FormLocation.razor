@@ -19,17 +19,21 @@
                    <InputDate class="form-control" @bind-Value="@Location.Year"></InputDate>
                    <ValidationMessage For="@(()=>Location.Year)"></ValidationMessage>
                 </div>
-            @*Input ProductionType*@
+            </div>
+                @* Input ProductionType
                 <div class="col-sm-4">
                     <InputNumber class="form-control" @bind-Value="@Location.ProductionType"></InputNumber>
                     <ValidationMessage For="@(()=>@Location.ProductionType)"></ValidationMessage>
                 </div>
-                @*Input para industria*@
-                <div class="col-sm-4">
+                Input para industria
+
+                <div class="col-sm-4">
                     <InputNumber class="form-control" @bind-Value="@Location.Industry"></InputNumber>
                     <ValidationMessage For="@(()=>Location.Industry)"></ValidationMessage>
                 </div>
-            </div>
+                </div>  *@
+
+
             @*Campo que permite el cargue de una foto*@
             <div class="form-group">
                 <PicComponent Label="picture" ImageSelected="PicSelected" PicURL="@PicURL" ></PicComponent>

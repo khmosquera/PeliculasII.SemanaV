@@ -22,7 +22,8 @@ namespace PeliculaIISemanaIV.Shared.Entity
         
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public string Trailer { get; set; }
-        public List <CategoryMovie> CategoriesMovie {get;set;} = new List <CategoryMovie> ();
+        public List <CategoryMovie> CategoriesMovies{get;set;} = new List<CategoryMovie>();
+        public LinkedList<MovieActor> MoviesActor {get;set;}
         public string ShortName
         {
             get

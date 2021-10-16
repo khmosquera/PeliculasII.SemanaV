@@ -4687,7 +4687,7 @@
         }
       },
       {
-        "HashCode": 294668070,
+        "HashCode": 2020368776,
         "Kind": "Components.Component",
         "Name": "PeliculaIISemanaIV.Client.Pages.Components.PicComponent",
         "AssemblyName": "PeliculaIISemanaIV.Client",
@@ -4716,10 +4716,10 @@
           },
           {
             "Kind": "Components.Component",
-            "Name": "PicSelected",
+            "Name": "ImageSelected",
             "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
             "Metadata": {
-              "Common.PropertyName": "PicSelected",
+              "Common.PropertyName": "ImageSelected",
               "Components.EventCallback": "True"
             }
           }
@@ -4730,7 +4730,7 @@
         }
       },
       {
-        "HashCode": 1249647563,
+        "HashCode": -1418350125,
         "Kind": "Components.Component",
         "Name": "PeliculaIISemanaIV.Client.Pages.Components.PicComponent",
         "AssemblyName": "PeliculaIISemanaIV.Client",
@@ -4759,10 +4759,10 @@
           },
           {
             "Kind": "Components.Component",
-            "Name": "PicSelected",
+            "Name": "ImageSelected",
             "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
             "Metadata": {
-              "Common.PropertyName": "PicSelected",
+              "Common.PropertyName": "ImageSelected",
               "Components.EventCallback": "True"
             }
           }
@@ -5081,39 +5081,6 @@
         }
       },
       {
-        "HashCode": -1855070194,
-        "Kind": "Components.Component",
-        "Name": "PeliculaIISemanaIV.Client.Pages.Movies.FilterMovies",
-        "AssemblyName": "PeliculaIISemanaIV.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FilterMovies"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PeliculaIISemanaIV.Client.Pages.Movies.FilterMovies"
-        }
-      },
-      {
-        "HashCode": -118732815,
-        "Kind": "Components.Component",
-        "Name": "PeliculaIISemanaIV.Client.Pages.Movies.FilterMovies",
-        "AssemblyName": "PeliculaIISemanaIV.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "PeliculaIISemanaIV.Client.Pages.Movies.FilterMovies"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "PeliculaIISemanaIV.Client.Pages.Movies.FilterMovies",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1561640194,
         "Kind": "Components.Component",
         "Name": "PeliculaIISemanaIV.Client.Pages.Movies.Home",
@@ -5143,6 +5110,75 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "PeliculaIISemanaIV.Client.Pages.Movies.Home",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1949773790,
+        "Kind": "Components.Component",
+        "Name": "PeliculaIISemanaIV.Client.Pages.Movies.ShowMovie",
+        "AssemblyName": "PeliculaIISemanaIV.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ShowMovie"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PeliculaIISemanaIV.Client.Pages.Movies.ShowMovie"
+        }
+      },
+      {
+        "HashCode": 1215264920,
+        "Kind": "Components.Component",
+        "Name": "PeliculaIISemanaIV.Client.Pages.Movies.ShowMovie",
+        "AssemblyName": "PeliculaIISemanaIV.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PeliculaIISemanaIV.Client.Pages.Movies.ShowMovie"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PeliculaIISemanaIV.Client.Pages.Movies.ShowMovie",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -5196,6 +5232,102 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "PeliculaIISemanaIV.Client.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 76014480,
+        "Kind": "Components.Component",
+        "Name": "PeliculaIISemanaIV.Client.Shared.MainLayout",
+        "AssemblyName": "PeliculaIISemanaIV.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PeliculaIISemanaIV.Client.Shared.MainLayout"
+        }
+      },
+      {
+        "HashCode": -602897380,
+        "Kind": "Components.Component",
+        "Name": "PeliculaIISemanaIV.Client.Shared.MainLayout",
+        "AssemblyName": "PeliculaIISemanaIV.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PeliculaIISemanaIV.Client.Shared.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "PeliculaIISemanaIV.Client.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2142900077,
+        "Kind": "Components.ChildContent",
+        "Name": "PeliculaIISemanaIV.Client.Shared.MainLayout.Body",
+        "AssemblyName": "PeliculaIISemanaIV.Client",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "PeliculaIISemanaIV.Client.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 96399995,
+        "Kind": "Components.ChildContent",
+        "Name": "PeliculaIISemanaIV.Client.Shared.MainLayout.Body",
+        "AssemblyName": "PeliculaIISemanaIV.Client",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "PeliculaIISemanaIV.Client.Shared.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "PeliculaIISemanaIV.Client.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

@@ -13,90 +13,90 @@ namespace PeliculaIISemanaIV.Client.Pages.Movies
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 1 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 2 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 3 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 4 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 5 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 6 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 7 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 8 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 9 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using PeliculaIISemanaIV.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 10 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using PeliculaIISemanaIV.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 11 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using PeliculaIISemanaIV.Shared.Entity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
+#line 12 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\_Imports.razor"
 using PeliculaIISemanaIV.Client.Services;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movies")]
     public partial class Home : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,7 +105,7 @@ using PeliculaIISemanaIV.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
+#line 29 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
       
     public List<Movie> Movies{get{return GetMovies();}}
     
@@ -114,23 +114,23 @@ using PeliculaIISemanaIV.Client.Services;
 #line hidden
 #nullable disable
 #nullable restore
-#line 31 "c:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
+#line 31 "C:\PeliculasII\PeliculaIISemanaIV\PeliculaIISemanaIV\Client\Pages\Movies\Home.razor"
                                                       
     private List<Movie> GetMovies(){
         return new List<Movie>(){
-            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie1.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie4.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie5.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie6.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie7.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI  ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie8.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie9.jpg", Premier=new DateTime(2021,10,01)},
-            new Movie(){Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie10.jpg", Premier=new DateTime(2021,10,01)},
-            };
+            new Movie(){Id=1, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie1.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=2, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie2.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=3, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie3.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=4, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie4.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=5, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie5.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=6, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie6.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=7, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie7.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=8, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie8.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=9, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie9.jpg", Premier=new DateTime(2021,10,01)},
+            new Movie(){Id=10, Name=" PelículaI ", Sinopsis="Trama de la movie ...", Poster="/Images/PeliculasII/movie10.jpg", Premier=new DateTime(2021,10,01)},
+            }; 
         }
-
+    
 
 #line default
 #line hidden

@@ -30,7 +30,7 @@
 @code {
     [Parameter] public string Label { get; set; } = "Imagen";
     [Parameter] public string PicURL { get; set; }
-    [Parameter] public EventCallback<string> PicSelected { get; set; }
+    [Parameter] public EventCallback<string> ImageSelected { get; set; }
     private string imageF;
     async Task OnChange(InputFileChangeEventArgs e)
     {
@@ -41,7 +41,7 @@
             await image.OpenReadStream().ReadAsync(tamaño);
             imageF = Convert.ToBase64String(tamaño);
             PicURL = null;
-            await PicSelected.InvokeAsync(imageF);
+            await ImageSelected.InvokeAsync(imageF);
             StateHasChanged();
         }
     }
